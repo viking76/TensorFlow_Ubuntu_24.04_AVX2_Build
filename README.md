@@ -1,5 +1,5 @@
-TensorFlow-Ubuntu-Build-Script
-En cour de Dev ne fonctionne pas ................
+*TensorFlow-Ubuntu-Build-Script*
+*** En cour de Dev ne fonctionne pas ................***
 Ce dépôt contient un script pour compiler TensorFlow à partir du code source sur une machine Ubuntu. Il a été optimisé pour utiliser les instructions AVX2 et FMA, garantissant ainsi des performances accrues pour les processeurs compatibles.
 Prérequis
 
