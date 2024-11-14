@@ -1,7 +1,7 @@
 *TensorFlow-Ubuntu-Build-Script*
 
 
-*** En cour de Dev ne fonctionne pas ................***
+*** Work ***
 
 
 
