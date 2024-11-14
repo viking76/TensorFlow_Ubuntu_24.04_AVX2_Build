@@ -11,7 +11,7 @@ Prérequis
     Système d'exploitation : Ubuntu 24.04 ou version plus récente.
     Outils de compilation :
         Bazel (version compatible avec la version de TensorFlow souhaitée)
-        Python (recommandé : 3.8 à 3.12)
+        Python (recommandé : 3.12)
         Pip et virtualenv
     Dépendances supplémentaires :
         Git
