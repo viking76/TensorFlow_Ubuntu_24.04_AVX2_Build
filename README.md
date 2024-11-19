@@ -18,7 +18,7 @@ Prérequis
         Python packages : numpy, cython, setuptools
 
 
-Pour installer directement le binaire 
+Pour installer directement le binaire comiler sur un 3900x
 
     curl -L https://github.com/viking76/TensorFlow-Ubuntu-Build-Script/releases/download/TF2.17/tensorflow_cpu-2.17.1-cp312-cp312-linux_x86_64.whl
     sudo pip install ~/tensorflow_cpu*.whl
