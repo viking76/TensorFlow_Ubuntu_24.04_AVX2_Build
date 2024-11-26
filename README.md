@@ -19,7 +19,7 @@ Prérequis
 
 To build from scratch:
 
-    curl -L https://raw.githubusercontent.com/viking76/TensorFlow_Ubuntu_AVX2_Build/refs/heads/main/tensorflow_builder.sh
+    wget https://raw.githubusercontent.com/viking76/TensorFlow_Ubuntu_AVX2_Build/refs/heads/main/tensorflow_builder.sh
     sh ./tensorflow_builder.sh
     
 Pour installer directement le binaire comiler sur un 3900x
