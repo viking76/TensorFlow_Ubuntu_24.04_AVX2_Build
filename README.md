@@ -17,7 +17,11 @@ Prérequis
         Git
         Python packages : numpy, cython, setuptools
 
+To build from scratch:
 
+    curl -L https://raw.githubusercontent.com/viking76/TensorFlow_Ubuntu_AVX2_Build/refs/heads/main/tensorflow_builder.sh
+    sh ./tensorflow_builder.sh
+    
 Pour installer directement le binaire comiler sur un 3900x
 
     curl -L https://github.com/viking76/TensorFlow-Ubuntu-Build-Script/releases/download/TF2.17/tensorflow_cpu-2.17.1-cp312-cp312-linux_x86_64.whl
