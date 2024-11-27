@@ -56,6 +56,9 @@ Erreurs courantes
     Incompatibilité de version de Bazel
     Vérifiez la version de Bazel avec bazel --version et comparez-la avec celle recommandée pour la version de TensorFlow. Ajustez si nécessaire.
 
+License
+
+Apache License 2.0
 
 Auteurs
 
