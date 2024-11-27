@@ -56,12 +56,15 @@ Erreurs courantes
     Incompatibilité de version de Bazel
     Vérifiez la version de Bazel avec bazel --version et comparez-la avec celle recommandée pour la version de TensorFlow. Ajustez si nécessaire.
 
-License
 
-Apache License 2.0
 
 Auteurs
 
 Ce dépôt a été mis en place pour faciliter la compilation optimisée de TensorFlow sous Ubuntu.
 
 Ce README.md couvre les étapes principales et donne des instructions pour la résolution des erreurs courantes.
+
+
+License
+
+Apache License 2.0
