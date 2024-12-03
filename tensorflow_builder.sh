@@ -72,11 +72,14 @@ rm ~/tensorflow_pkg/*
 sudo mv ~/tensorflow/bazel-bin/tensorflow/tools/pip_package/wheel_house/* ~/tensorflow_pkg
 
 # 10. Installation du package TensorFlow compilé dans l'environnement virtuel
-echo -e "\033[1mInstalling the compiled TensorFlow package...\033[0m"
-echo -e "\033[1mpip install ~/tensorflow_pkg/tensorflow_cpu*.whl\033[0m"
+echo -e "\033[1mFor Installing the compiled TensorFlow package...\033[0m"
+echo -e "\033[1mpip install ~/tensorflow_pkg/tensorflow_cpu-$TF_VERSION*.whl\033[0m"
 
 # 11. Désactivation de l'environnement virtuel
 deactivate
 
 echo -e "\033[1mTensorFlow build with AVX2 and FMA optimization completed successfully.\033[0m"
 echo -e "\033[1mTo use TensorFlow, activate the virtual environment with: source tf_build_env/bin/activate\033[0m"
+echo -e "\033[1m****************************************************.\033[0m"
+echo -e "\033[1m****************  MERCI QUI ? **********************.\033[0m"
+echo -e "\033[1m****************************************************.\033[0m"
