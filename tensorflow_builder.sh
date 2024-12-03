@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration des versions
-TF_VERSION="2.17.1"                 # Version TensorFlow souhaitée
+TF_VERSION="2.18.0"                 # Version TensorFlow souhaitée
 BAZELISK_VERSION="6.5.0"            # Version de Bazelisk (gère Bazel)
 NUMPY_VERSION="2.1.2"              # Version de Numpy
 SIX_VERSION="1.15.0"                # Version de Six
@@ -51,7 +51,7 @@ git checkout v$TF_VERSION
 # 7. Configuration de la build TensorFlow
 echo -e "\033[1mConfiguring TensorFlow build...\033[0m"
 export TF_ENABLE_XLA=1  # Active l'optimisation XLA
-export CC_OPT_FLAGS="-march=native -mavx2 -mfma"  # Optimisation AVX2 et FMA
+export CC_OPT_FLAGS="-march=x86-64-v3" #-mavx2 -mfma  # Optimisation AVX2 et FMA voir https://github.com/HenrikBengtsson/x86-64-level
 export TF_NEED_CUDA=0   # Désactiver CUDA pour une build CPU uniquement
 export TF_NEED_CLANG=1
 export TF_PYTHON_VERSION=3.12
@@ -68,11 +68,12 @@ bazel build --copt=-mavx2 --copt=-mfma --config=opt //tensorflow/tools/pip_packa
 # 9. Création du package pip
 echo -e "\033[1mCreating pip package for TensorFlow...\033[0m"
 mkdir -p ~/tensorflow_pkg
+rm ~/tensorflow_pkg/*
 sudo mv ~/tensorflow/bazel-bin/tensorflow/tools/pip_package/wheel_house/* ~/tensorflow_pkg
 
 # 10. Installation du package TensorFlow compilé dans l'environnement virtuel
 echo -e "\033[1mInstalling the compiled TensorFlow package...\033[0m"
-pip install ~/tensorflow_pkg/tensorflow_cpu*.whl
+echo -e "\033[1mpip install ~/tensorflow_pkg/tensorflow_cpu*.whl\033[0m"
 
 # 11. Désactivation de l'environnement virtuel
 deactivate
