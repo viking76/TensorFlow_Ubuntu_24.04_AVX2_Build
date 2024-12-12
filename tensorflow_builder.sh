@@ -6,7 +6,7 @@ BAZELISK_VERSION="6.5.0"            # Version de Bazelisk (gère Bazel)
 NUMPY_VERSION="2.1.2"              # Version de Numpy
 SIX_VERSION="1.15.0"                # Version de Six
 NUM_CORES=$(nproc) 
-DEPENDENCIES=("curl" "git" "pip" "cpuinfo" "build-essential" "patchelf" "python3-full" "python3-dev" "python3-distutils" "python3-venv" "llvm-17" "clang-17")
+DEPENDENCIES=("curl" "git" "pip" "cpuinfo" "build-essential" "patchelf" "python3-full" "python3-dev" "python3-distutils" "python3-venv" "libopenblas-dev" "llvm-17" "clang-17")
 
 # 1. Vérification et installation des dépendances de base
 echo -e "\033[1mChecking base dependencies...\033[0m"
