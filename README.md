@@ -6,25 +6,35 @@
 
 
 Ce dépôt contient un script pour compiler TensorFlow à partir du code source sur une machine Ubuntu. Il a été optimisé pour utiliser les instructions AVX2 et FMA, garantissant ainsi des performances accrues pour les processeurs compatibles.
+
+**Versions mises à jour (Juin 2025) :**
+- TensorFlow 2.19.0 (dernière version stable)
+- Bazelisk 1.26.0 (gestion automatique de Bazel)
+- NumPy 2.2.6 (dernière version compatible)
+- Six 1.17.0 (dernière version)
+
 Prérequis
 
-    Système d'exploitation : Ubuntu 24.04 ou version plus récente.
+    Système d'exploitation : Ubuntu 20.04 LTS ou plus récent (24.04 LTS recommandé)
+    Vérification automatique de la version du système d'exploitation
     Outils de compilation :
-        Bazel (version compatible avec la version de TensorFlow souhaitée)
+        Bazelisk (gère automatiquement la version de Bazel compatible)
         Python (recommandé : 3.12)
         Pip et virtualenv
     Dépendances supplémentaires :
         Git
-        Python packages : numpy, cython, setuptools
+        Bibliothèques mathématiques : libomp-dev, libopenblas-dev, liblapack-dev, libeigen3-dev, libblas-dev, libatlas-base-dev
+        Outils système : cpuinfo
+        Python packages : numpy, six
 
 To build from scratch:
 
     wget https://raw.githubusercontent.com/viking76/TensorFlow_Ubuntu_AVX2_Build/refs/heads/main/tensorflow_builder.sh
     sh ./tensorflow_builder.sh
     
-Pour installer directement le binaire comiler sur un 3900x
+Pour installer directement le binaire compilé sur un 3900x
 
-    curl -L https://github.com/viking76/TensorFlow-Ubuntu-Build-Script/releases/download/TF2.17/tensorflow_cpu-2.17.1-cp312-cp312-linux_x86_64.whl
+    curl -L https://github.com/viking76/TensorFlow-Ubuntu-Build-Script/releases/download/TF2.19/tensorflow_cpu-2.19.0-cp312-cp312-linux_x86_64.whl
     sudo pip install ~/tensorflow_cpu*.whl
 
 Installation
