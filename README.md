@@ -37,6 +37,21 @@ Pour installer directement le binaire compilé sur un 3900x
     curl -L https://github.com/viking76/TensorFlow-Ubuntu-Build-Script/releases/download/TF2.19/tensorflow_cpu-2.19.0-cp312-cp312-linux_x86_64.whl
     sudo pip install ~/tensorflow_cpu*.whl
 
+### 🚀 Build avec support GPU (NVIDIA CUDA)
+
+Pour compiler TensorFlow **avec support GPU**, utilisez le script dédié :
+
+    wget https://raw.githubusercontent.com/viking76/TensorFlow_Ubuntu_AVX2_Build/refs/heads/main/tensorflow_builder_gpu.sh
+    sh ./tensorflow_builder_gpu.sh
+
+**Prérequis GPU :**
+- Carte graphique NVIDIA compatible (architecture Pascal ou supérieure)
+- Pilotes NVIDIA installés (`nvidia-driver-535` recommandé)
+- CUDA Toolkit **12.3** (requis pour TensorFlow 2.19.0)
+- cuDNN **8.9** (requis pour TensorFlow 2.19.0)
+
+Le script vérifie automatiquement la présence de CUDA et cuDNN et propose de les installer si nécessaire.
+
 Installation
 1. Cloner le dépôt TensorFlow
 
@@ -65,6 +80,13 @@ Erreurs courantes
     Erreur de permission lors de la génération des fichiers de configuration
     Incompatibilité de version de Bazel
     Vérifiez la version de Bazel avec bazel --version et comparez-la avec celle recommandée pour la version de TensorFlow. Ajustez si nécessaire.
+
+### ⚠️ Dépannage GPU
+
+- **Erreur CUDA non trouvé** : Vérifiez que `nvcc --version` fonctionne. Si non, installez CUDA Toolkit 12.3.
+- **Erreur cuDNN non trouvé** : Vérifiez que `/usr/include/cudnn_version.h` existe. Installez `libcudnn8-dev` si nécessaire.
+- **Incompatibilité de version CUDA** : TensorFlow 2.19.0 nécessite **CUDA 12.3** et **cuDNN 8.9**. Utilisez `sudo apt install nvidia-cuda-toolkit=12.3` pour forcer la version.
+- **Pilotes NVIDIA manquants** : Exécutez `nvidia-smi` pour vérifier. Installez avec `sudo ubuntu-drivers autoinstall`.
 
 
 
